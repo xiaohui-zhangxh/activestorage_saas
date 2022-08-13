@@ -40,7 +40,7 @@ module ActiveStorage
       end
 
       def http_method_for_direct_upload
-        service.service_http_method_for_direct_upload if service.respond_to?(:http_method_for_direct_upload)
+        service.http_method_for_direct_upload if service.respond_to?(:http_method_for_direct_upload)
       end
 
       def http_response_type_for_direct_upload
