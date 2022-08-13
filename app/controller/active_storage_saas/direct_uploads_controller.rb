@@ -1,4 +1,4 @@
-class ActiveStorageSaas::DirectUploadsController < ActiveStorageSaas::BaseController
+class ActiveStorageSaas::DirectUploadsController < ActiveStorage::BaseController
   def create
     blob = ActiveStorage::Blob.create!(blob_args)
     render json: direct_upload_json(blob)
@@ -19,8 +19,10 @@ class ActiveStorageSaas::DirectUploadsController < ActiveStorageSaas::BaseContro
       blob.as_json(root: false, methods: :signed_id, only: :signed_id)
           .merge(direct_upload: {
                    url: blob.service_url_for_direct_upload,
+                   method: blob.service_http_method_for_direct_upload,
+                   responseType: blob.service_http_response_type_for_direct_upload,
                    headers: blob.service_headers_for_direct_upload,
-                   formData: blob.service_form_data_for_direct_upload
+                   formData: blob.service_form_data_for_direct_upload.presence
                  })
     end
 end

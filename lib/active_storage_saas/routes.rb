@@ -3,9 +3,9 @@ module ActiveStorageSaas
     # rubocop: disable Layout/LineLength
     def draw_active_storage_saas_routes(
       prefix: '/rails/active_storage',
-      blobs_controller: 'active_storage_saas/blobs',
-      representations_controller: 'active_storage_saas/representations',
-      disk_controller: 'active_storage_saas/disk',
+      blobs_controller: 'active_storage/blobs',
+      representations_controller: 'active_storage/representations',
+      disk_controller: 'active_storage/disk',
       direct_uploads_controller: 'active_storage_saas/direct_uploads',
       **option_overrides
     )

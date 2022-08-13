@@ -1,3 +1,5 @@
+require 'active_storage/service/saas_service'
+
 module ActiveStorageSaas
   module BlobPatch
     extend ActiveSupport::Concern
@@ -14,6 +16,14 @@ module ActiveStorageSaas
           class_service
         end
       end
+    end
+
+    def service_http_method_for_direct_upload
+      service.respond_to?(:http_method_for_direct_upload) ? service.http_method_for_direct_upload : nil
+    end
+
+    def service_http_response_type_for_direct_upload
+      service.respond_to?(:http_response_type_for_direct_upload) ? service.http_response_type_for_direct_upload : nil
     end
 
     # support sending data from form instead of headers

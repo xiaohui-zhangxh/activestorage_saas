@@ -39,6 +39,14 @@ module ActiveStorage
         service.respond_to?(method)
       end
 
+      def http_method_for_direct_upload
+        service.service_http_method_for_direct_upload if service.respond_to?(:http_method_for_direct_upload)
+      end
+
+      def http_response_type_for_direct_upload
+        service.http_response_type_for_direct_upload if service.respond_to?(:http_response_type_for_direct_upload)
+      end
+
       def form_data_for_direct_upload(key, expires_in:, content_type:, content_length:, checksum:)
         if service.respond_to?(:form_data_for_direct_upload)
           service.form_data_for_direct_upload key,
@@ -62,10 +70,10 @@ module ActiveStorage
 
       private
 
-      def default_service
-        @default_service ||= ActiveStorage::Service.configure @options[:default_service],
-                                                              Rails.configuration.active_storage.service_configurations
-      end
+        def default_service
+          @default_service ||= ActiveStorage::Service.configure @options[:default_service],
+                                                                Rails.configuration.active_storage.service_configurations
+        end
     end
   end
 end

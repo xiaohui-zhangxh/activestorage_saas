@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 activestorage_version = '5.2.5'
-gem_version = 1
+gem_version = 2
 
 Gem::Specification.new do |spec|
   spec.name = "activestorage_saas"
