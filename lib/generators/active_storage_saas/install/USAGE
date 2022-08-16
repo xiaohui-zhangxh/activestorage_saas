@@ -1,0 +1,5 @@
+Description:
+    Install ActiveStorageSaas
+
+Example:
+    bin/rails generate active_storage_saas:install

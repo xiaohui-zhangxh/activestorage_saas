@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
-activestorage_version = '5.2.5'
-gem_version = 1
-
 Gem::Specification.new do |spec|
   spec.name = "activestorage_saas"
-  spec.version = "#{activestorage_version}.#{gem_version}"
+  spec.version = "7.0.3.1"
   spec.authors = ["xiaohui"]
   spec.email = ["xiaohui@tanmer.com"]
 
@@ -29,5 +26,5 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activestorage", activestorage_version
+  spec.add_dependency "activestorage", '7.0.3.1'
 end
