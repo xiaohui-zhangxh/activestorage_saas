@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "activestorage_saas"
-  spec.version = "7.0.3.1"
+  spec.version = "7.0.4"
   spec.authors = ["xiaohui"]
   spec.email = ["xiaohui@tanmer.com"]
 
