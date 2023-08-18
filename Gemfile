@@ -5,7 +5,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in activestorage_saas.gemspec
 gemspec
 
-gem "rails", "~> 7.0"
+gem "rails", "7.0.7"
 gem "sqlite3"
 gem "propshaft"
 gem "rspec-rails", "~> 5.1"
