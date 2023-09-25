@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activestorage", '>=7.0.3.1', '<= 7.0.7'
+  spec.add_dependency "activestorage", '>=7.0.3.1', '<= 7.1'
 end
