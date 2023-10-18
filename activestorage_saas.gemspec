@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "activestorage_saas"
-  spec.version = "7.0.7"
+  spec.version = "7.1.1"
   spec.authors = ["xiaohui"]
   spec.email = ["xiaohui@tanmer.com"]
 
@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activestorage", '>=7.0.3.1', '<= 7.0.7'
+  spec.add_dependency "activestorage", '>=7.0.3.1', '< 7.2'
 end

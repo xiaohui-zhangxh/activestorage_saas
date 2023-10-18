@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    activestorage_saas (7.0.7)
-      activestorage (>= 7.0.3.1, <= 7.0.7)
+    activestorage_saas (7.1.1)
+      activestorage (>= 7.0.3.1, < 7.2)
 
 GEM
   remote: https://rubygems.org/
