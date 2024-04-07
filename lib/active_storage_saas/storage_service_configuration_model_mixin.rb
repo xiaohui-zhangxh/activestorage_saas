@@ -30,7 +30,8 @@ module ActiveStorageSaas
       def to_service
         defined_service = ActiveStorage::Blob.services.fetch(service_name)
         klass = defined_service.class
-        options = ActiveStorage::Blob.services.send(:configurations).fetch(service_name.to_sym)
+        options = ActiveStorage::Blob.services.send(:configurations).fetch(service_name.to_sym).deep_dup
+        options.delete(:service) if service_name == 'amazon'
         options.deep_merge! service_options.deep_symbolize_keys
         klass.new(**options).tap do |instance|
           instance.instance_eval <<~RUBY
